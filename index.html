@@ -1,47 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>MATHVERSE — The Portal</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MATHVERSE | The Portal</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <canvas id="bgCanvas"></canvas>
+    <section id="landing-page">
+      <div class="landing-content">
+        <div class="glitch-wrapper">
+          <h1 class="glitch" data-text="MATHVERSE">MATHVERSE</h1>
+        </div>
+        <p class="subtitle">THE MAGICS OF MATHEMATICS</p>
+        <div class="intro-box">
+          <h3><i class="fas fa-terminal"></i> SYSTEM DESCRIPTION</h3>
+          <p>
+            Welcome to a digital exploration of numerical sorcery. This platform
+            is designed for students who wish to see beyond the textbook.
+          </p>
+          <p>
+            We have curated <strong>10 Fundamental Magics</strong> ranging from
+            mental arithmetic hacks to the mysteries of the number 6174.
+          </p>
+          <ul class="feature-list">
+            <li>
+              <i class="fas fa-check-circle"></i> 10 Interactive Logic Modules
+            </li>
+            <li>
+              <i class="fas fa-check-circle"></i> Visual Proofs & Algorithms
+            </li>
+            <li>
+              <i class="fas fa-check-circle"></i> College-Level Number Theory
+            </li>
+          </ul>
+        </div>
 
-  <!-- fonts / icons (kept) -->
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <canvas id="bgCanvas"></canvas>
-  <section id="landing-page">
-    <div class="landing-content">
-      <h1 class="glitch" data-text="MATHVERSE">MATHVERSE</h1>
-      <p class="subtitle">THE MAGICS OF MATHEMATICS</p>
-
-      <div class="intro-box">
-        <h3><i class="fas fa-terminal"></i> SYSTEM DESCRIPTION</h3>
-        <p>Welcome — explore number tricks, simple proofs and interactive demonstrations.</p>
-        <p>10 quick modules. Play around.</p>
-
-        <ul class="feature-list">
-          <li><i class="fas fa-check-circle"></i> 10 Interactive modules</li>
-          <li><i class="fas fa-check-circle"></i> Visual proofs</li>
-          <li><i class="fas fa-check-circle"></i> Handy tricks</li>
-        </ul>
+        <button class="start-btn" onclick="enterSystem()">[ MAGIC ]</button>
       </div>
-      <button class="start-btn" id="enterBtn">[ MAGIC ]</button>
+    </section>
+    <div id="app-interface" class="hidden">
+      <nav class="sidebar">
+        <div class="brand"><i class="fas fa-cube fa-spin"></i> MATHVERSE</div>
+        <div class="scroll-menu">
+          <button onclick="loadScene(1)" class="active">
+            01. Multiply by 6
+          </button>
+          <button onclick="loadScene(2)">02. Answer is 2</button>
+          <button onclick="loadScene(3)">03. Same 3-Digits</button>
+          <button onclick="loadScene(4)">04. 6 Digits to 3</button>
+          <button onclick="loadScene(5)">05. The 11 Rule</button>
+          <button onclick="loadScene(6)">06. Memorizing Pi</button>
+          <button onclick="loadScene(7)">07. Magic Digits</button>
+          <button onclick="loadScene(8)">08. Large Multiply</button>
+          <button onclick="loadScene(9)">09. Divisibility</button>
+          <button onclick="loadScene(10)">10. Finger Math</button>
+        </div>
+      </nav>
+      <main id="stage"></main>
     </div>
-  </section>
-  <div id="app-interface" class="hidden">
-    <nav class="sidebar">
-      <div class="brand"><i class="fas fa-cube fa-spin"></i> MATHVERSE</div>
-      <div class="scroll-menu" id="menuBtns">
-        <!-- Buttons inserted from JS for small human touch (keeps HTML shorter) -->
-      </div>
-    </nav>
-    <main id="stage">
-    </main>
-  </div>
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
