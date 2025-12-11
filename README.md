@@ -51,6 +51,12 @@ Each trick has its own function (like `runTrick1()`).
 Just open **index.html** in your browser.  
 No server or installation needed.
 
+# Contributors Name:
+1.Siddhant Kumar Thakur 
+2.Onkar Swami
+3.Ritik 
+
+
 
 
 
